@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANIMATE JQ</title>
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div>
+      <button class="btn1" >show text</button>
+      <button class="btn2" >add text</button>
+      
+    </div>
+
+    <p class="txt">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique,
+      dolor! Obcaecati tenetur maxime, aliquid non voluptas illo consequuntur
+      quae accusamus ipsum dolorum voluptates praesentium laborum? Corrupti cum
+      quasi officia incidunt!
+    </p>
+    <div class="box"></div>
+
+    <script>
+  
+        $(".btn1").click(function () {
+          // $(".txt").html('<h1 class="bh">bharat dhola</h1>');
+          $(".txt").append("<table><tr><td>oiujsodo</td><td>oiujsodo</td></tr></table>");
+          $("table").attr('border','2');
+          // $('.txt').text('<h1>bharat dhola</h1>');
+        });
+        $(".btn2").click(function () {
+        
+          $("table").attr({bgcolor:'red',border:'5',width:'200px',cellspacing:'12'});
+          $("table tr").attr({bgcolor:'white',border:'5'});
+          $("body").attr({bgcolor:'green'});
+        });
+
+      
+
+        $(".btn1").click(function () {
+          $(".box").html('<h1 class="bh">bharat dhola</h1>');
+          // $('.txt').text('<h1>bharat dhola</h1>');
+        });
+      $(".box").click(function () {
+        $(".box").animate(
+          {
+            height: "400px",
+            width: "400px",
+            opacity: 0.9,
+          },
+          {
+            duration: 2000,
+            complete: function () {
+              $(this).animate(
+                {
+                  height: "100px",
+                  width: "150px",
+                },
+                2000,
+                function () {
+                  $(".box").text("Animationcompleted..");
+                }
+              );
+            },
+
+            start: function () {
+              $(".box").append("startinganimation..");
+            },
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

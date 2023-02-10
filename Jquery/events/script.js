@@ -1,0 +1,48 @@
+$(".btn1").click(function(){
+    $(".txt").css('font-size','22px');
+    $(".txt2").css('font-size','22px');
+    $(".btn1").css("background-color","red")
+});
+$(".btn2").dblclick(function(){
+    $(".txt").css('color','green');
+    $(".txt2").css('color','pink');
+    $(".btn1").css("background-color","white");
+    $(".btn2").css("background-color","red");
+});
+$(".btn3").mouseenter(function(){
+    $(".txt").css('color','red');
+    $(".txt2").css('color','pink');
+    $(".btn2").css("background-color","white");
+    $(".btn3").css("background-color","red");
+
+});
+$(".btn4").mouseleave(function(){
+    $(".txt").css('color','green');
+    $(".txt2").css('color','pink');
+    $(".btn3").css("background-color","white");
+    $(".btn4").css("background-color","red");
+});
+$(".btn5").click(function(){
+    $(".txt").hide('slow');
+    $(".txt2").hide('slow');
+    $(".btn4").css("background-color","white");
+    $(".btn5").css("background-color","red");
+});
+$(".btn6").click(function(){
+    $(".txt").show('slow');
+    $(".txt2").show('slow');
+    $(".btn5").css("background-color","white");
+    $(".btn6").css("background-color","red");
+});
+$(".input").keypress(function(){
+    $("input").css('background-color','red');
+    $("input").css('color','white');
+});
+$(".input").keyup(function(){
+    $("input").css('background-color','green');
+    $("input").css('color','white');
+});
+$(".input").keydown(function(){
+    $("input").css('background-color','black');
+    $("input").css('color','white');
+});
