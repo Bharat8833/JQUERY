@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="jeqery.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .box {
+        border-radius: 100%;
+        padding: 30px;
+        border: 3px ridge rgb(234, 225, 225);
+        cursor: pointer;
+      }
+
+      #yellow {
+        background-color: yellow;
+      }
+      #green {
+        background-color: green;
+      }
+
+      #blue {
+        background-color: blue;
+      }
+      #orange {
+        background-color: orange;
+      }
+
+      #black {
+        background-color: black;
+      }
+
+      #red {
+        background-color: red;
+      }
+
+      #grey {
+        background-color: grey;
+      }
+
+      .main {
+        display: flex;
+        gap: 20px;
+        padding: 400px 200px 0 200px;
+        border: 3px solid black;
+        box-shadow: 0px 50px 50px rgb(255, 255, 255);
+        font-size: 20px;
+        color: white;
+      }
+
+      body.by {
+        background-color: yellow;
+      }
+      body.bg {
+        background-color: green;
+      }
+      body.br {
+        background-color: red;
+      }
+      body.bb {
+        background-color: black;
+      }
+      body.bgrey {
+        background-color: grey;
+      }
+
+      .add {
+        background-color: rgb(255, 255, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="box" id="yellow"></div>
+      <div class="box" id="green">click agin</div>
+      <div class="box" id="red">click agin</div>
+      <div class="box" id="black">click agin</div>
+      <div class="box" id="grey"></div>
+    </div>
+  </body>
+
+  <script>
+    $("#yellow").click(boxy);
+    function boxy() {
+      $("body").attr("class", "by");
+    }
+    $("#green").on("click", function () {
+      $(".main").toggleClass("add");
+      $("body").attr("class", "bg");
+    });
+
+    $("#red").on("click", function () {
+      $(".main").toggleClass("add");
+      $("body").attr("class", "br");
+    });
+    $("#black").on("click", function () {
+      $("body").attr("class", "bb");
+      $(".main").toggleClass("add");
+    });
+    $("#grey").on("click", function () {
+      $("body").attr("class", "bgrey");
+    });
+  </script>
+</html>
