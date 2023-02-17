@@ -1,0 +1,36 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+    text-align: center;
+    background-color: #262625;
+}
+
+
+
+/* ---- reset ---- */
+body {
+    margin: 0;
+    font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+#particles-js {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    /* background-color: #000000; */
+    background-image: url("image/pngtree-abstract-background-design-green-abstract-background-design-line-art-background-design-image_419710.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+
+}
+
+
+
